@@ -1,10 +1,8 @@
 DOMSelectors ={
     form: document.querySelector("#form"),
     itemname: document.querySelector("#item-name"),
-
+    parent: document.querySelector(".container"),
 }
-
-
 async function getData(){
     let thing = DOMSelectors.itemname.value.toLowerCase();
     thing = thing.replaceAll(' ','-')
@@ -16,8 +14,7 @@ async function getData(){
         throw new Error(response.statusText);
     }
     const data = await response.json();
-    document.querySelector("h1").textContent= data.name;
-    document.querySelector("h2").textContent= data.desc;
+    
     } catch (error){
       
     }
