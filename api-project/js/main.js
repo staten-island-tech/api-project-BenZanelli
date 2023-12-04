@@ -16,7 +16,6 @@ async function getData(){
     }
     const data = await response.json();
     console.log(data.name)
-    
     DOMSelectors.parent.insertAdjacentHTML(
         "beforeend",
         `<div class='card'>
@@ -24,19 +23,19 @@ async function getData(){
         <img id="" src="" class="image">
         <h3 id="price" class="name">${data.desc}</h3>
         </div>`
-    )
-    } catch (error){
+    )} catch (error){
         DOMSelectors.parent.insertAdjacentHTML(
             "beforeend",
             `<div class='card'>
             <h2 id="name" class="name">Not Found</h2>
             </div>`
-        )
-    }
+        )}
+}
+function clearfields(){
+    DOMSelectors.itemname.value = ''
 }
 DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
     getData();
+    clearfields()
 });
-
-
