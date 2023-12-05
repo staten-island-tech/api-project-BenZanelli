@@ -1,3 +1,4 @@
+
 DOMSelectors ={
     form: document.querySelector("#form"),
     itemname: document.querySelector("#item-name"),
@@ -15,12 +16,11 @@ async function getData(){
         throw new Error(response.statusText);
     }
     const data = await response.json();
-    console.log(data.name)
+    console.log(data.name, data.damage.damage_type.index);
     DOMSelectors.parent.insertAdjacentHTML(
         "beforeend",
         `<div class='card'>
         <h2 id="name" class="name">${data.name}</h2>
-        <img id="" src="" class="image">
         <h3 id="price" class="name">${data.desc}</h3>
         </div>`
     )} catch (error){

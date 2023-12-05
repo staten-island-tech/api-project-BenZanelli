@@ -1,0 +1,63 @@
+:root{
+    --acidimg: url('/public/acid.jfif');
+    --fireimg: url('/public/fire.avif');
+    --forceimg: url('/public/fire.avif');
+    --coldimg: url('/public/fire.avif');
+    --psychicimg: url('/public/fire.avif');
+    --necroticimg:url('/public/fire.avif');
+    --slashingimg:url('/public/fire.avif');
+    --piercingimg: url('/public/fire.avif');
+    --bludgeoningimg: url('/public/fire.avif');
+    --lightningimg: url('/public/fire.avif'); 
+    --radiantimg: url('/public/fire.avif');
+    --thunderimg: url('/public/fire.avif');
+    --poisonimg: url('/public/fire.avif');
+    --elementalimg: url('/public/fire.avif');
+    --physcialimg: url('/public/fire.avif');
+    --backgroundimg: var(--acidimg);
+}
+.acid {
+        --backgroundimg: var(--acidimg)
+}
+.fire {
+    --backgroundimg:var(--fireimg)
+}
+.force {
+    --backgroundimg:var(--forceimg)
+}
+.cold {
+    --backgroundimg:var(--coldimg)
+}
+.psychic{
+    --backgroundimg:var(--psychicimg)
+}
+.necrotic{
+    --backgroundimg:var(--necroticimg)
+}
+.slashing {
+    --backgroundimg:var(--slashingimg)
+}
+.piercing{
+    --backgroundimg:var(--piercingimg)
+}
+.bludgeoning{
+    --backgroundimg:var(--bludgeoningimg)
+}
+.lightning{
+    --backgroundimg:var(--lightningimg)
+}
+.radiant{
+    --backgroundimg:var(--radiantimg)
+}
+.thunder{
+    --backgroundimg:var(--thunderimg)
+}
+.poison{
+    --backgroundimg:var(--poisionimg)
+}
+.elemental{
+    --backgroundimg:var(--elementalimg)
+}
+.physical{
+    --backgroundimg:var(--physcialimg)
+}
