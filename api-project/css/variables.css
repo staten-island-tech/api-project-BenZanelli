@@ -1,63 +1,63 @@
 :root{
-    --acidimg: url('/public/acid.jfif');
-    --fireimg: url('/public/fire.avif');
-    --forceimg: url('/public/fire.avif');
-    --coldimg: url('/public/fire.avif');
-    --psychicimg: url('/public/fire.avif');
-    --necroticimg:url('/public/fire.avif');
-    --slashingimg:url('/public/fire.avif');
-    --piercingimg: url('/public/fire.avif');
-    --bludgeoningimg: url('/public/fire.avif');
-    --lightningimg: url('/public/fire.avif'); 
-    --radiantimg: url('/public/fire.avif');
-    --thunderimg: url('/public/fire.avif');
-    --poisonimg: url('/public/fire.avif');
-    --elementalimg: url('/public/fire.avif');
-    --physcialimg: url('/public/fire.avif');
-    --backgroundimg: var(--acidimg);
+    --acidimg: url('../public/acid.jfif');
+    --fireimg: url('../public/fire.avif');
+    --forceimg: url('../public/fire.avif');
+    --coldimg: url('../public/fire.avif');
+    --psychicimg: url('../public/fire.avif');
+    --necroticimg:url('../public/necrotic.jfif');
+    --slashingimg:url('../public/slasher.jfif');
+    --piercingimg: url('../public/piercing.jfif');
+    --bludgeoningimg: url('../public/bludgeoning.jfif');
+    --lightningimg: url('../public/lightning.jfif'); 
+    --radiantimg: url('../public/radiant.webp');
+    --thunderimg: url('../public/thunder.png');
+    --poisonimg: url('../public/posion.jfif');
+    --elementalimg: url('../public/elemental.jfif');
+    --physcialimg: url('../public/psychical.jfif');
+    --backgroundimg: url("");
 }
-.acid {
+#acid {
         --backgroundimg: var(--acidimg)
 }
-.fire {
+#fire {
     --backgroundimg:var(--fireimg)
 }
-.force {
+#force {
     --backgroundimg:var(--forceimg)
 }
-.cold {
+#cold {
     --backgroundimg:var(--coldimg)
 }
-.psychic{
+#psychic{
     --backgroundimg:var(--psychicimg)
 }
-.necrotic{
+#necrotic{
     --backgroundimg:var(--necroticimg)
 }
-.slashing {
+#slashing {
     --backgroundimg:var(--slashingimg)
 }
-.piercing{
+#piercing{
     --backgroundimg:var(--piercingimg)
 }
-.bludgeoning{
+#bludgeoning{
     --backgroundimg:var(--bludgeoningimg)
 }
-.lightning{
+#lightning{
     --backgroundimg:var(--lightningimg)
 }
-.radiant{
+#radiant{
     --backgroundimg:var(--radiantimg)
 }
-.thunder{
+#thunder{
     --backgroundimg:var(--thunderimg)
 }
-.poison{
+#poison{
     --backgroundimg:var(--poisionimg)
 }
-.elemental{
+#elemental{
     --backgroundimg:var(--elementalimg)
 }
-.physical{
+#physical{
     --backgroundimg:var(--physcialimg)
-}
+}   

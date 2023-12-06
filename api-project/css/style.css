@@ -1,18 +1,19 @@
 @import url(variables.css);
 .card {
-    display: flex;
-    align-items: center;
-   flex-direction: column;  
-    background: url('/public/force.jpg');
-   width: 30%;
-   margin-left: auto;
-   margin-right: auto;
-   margin-bottom: 1.5rem;
-   padding: 3px;
-   box-shadow:10px 7px 10px black;
-   justify-content: space-around;
-   transition: all .5s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;  
+  background-image: var(--backgroundimg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  padding: 3px;
+  box-shadow:10px 7px 10px black;
+  justify-content: space-around;
+  transition: all .5s;
   border-radius: 20px;
   height: 50vh;
-
 }

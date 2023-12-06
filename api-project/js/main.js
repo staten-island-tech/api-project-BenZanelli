@@ -16,10 +16,22 @@ async function getData(){
         throw new Error(response.statusText);
     }
     const data = await response.json();
+    let id= "adosfhadskf"
+    function dmg(x){
+        x = data.damage.damage_type.index;
+        console.log(x)
+    if(x == ""){
+        x = "hi"
+        console.log("Hi")
+    }
+console.log(x)
+}
+    dmg(id)
+    console.log(id)
     console.log(data.name, data.damage.damage_type.index);
     DOMSelectors.parent.insertAdjacentHTML(
         "beforeend",
-        `<div class='card'>
+        `<div class='card' id=${id}>
         <h2 id="name" class="name">${data.name}</h2>
         <h3 id="price" class="name">${data.desc}</h3>
         </div>`
