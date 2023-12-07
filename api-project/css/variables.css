@@ -14,7 +14,16 @@
     --poisonimg: url('../public/posion.jfif');
     --elementalimg: url('../public/elemental.jfif');
     --physcialimg: url('../public/psychical.jfif');
-    --backgroundimg: url("");
+    --healimmg: url('../public/heal.jpg');
+    --abjurationimg: url('../public/abjuration.jpg');
+    --alterationimg: url('../public/alteration.png');
+    --conjurationimg: url('../public/conjuration.webp');
+    --divinationimg: url('../public/divination.webp');
+    --enchantmentimg: url('../public/enchantment.webp');
+    --illusionimg: url('../public/illusion.webp');
+    --invocationimg: url('../public/invocation.jpg');
+    --necromancyimg: url('../public/necromancy.jpg');
+     --backgroundimg: url("");
 }
 #acid {
         --backgroundimg: var(--acidimg)
@@ -61,3 +70,30 @@
 #physical{
     --backgroundimg:var(--physcialimg)
 }   
+#heal{
+    --backgroundimg:var(--healimmg)
+}
+#abjuration{
+    --backgroundimg:var(--abjurationimg)
+}
+#alteration{
+    --backgroundimg:var(--alterationimg)
+}
+#conjuration{
+    --backgroundimg:var(--conjurationimg)
+}
+#divination{
+    --backgroundimg:var(--divinationimg)
+}
+#enchantment{
+    --backgroundimg:var(--enchantmentimg)
+}
+#illusion{
+    --backgroundimg:var(--illusionimg)
+}
+#invocation{
+    --backgroundimg:var(--invocationimg)
+}
+#necromancy{
+    --backgroundimg:var(--necromancyimg)
+}

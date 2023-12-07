@@ -1,4 +1,16 @@
 @import url(variables.css);
+#form{
+  display: flex;
+ justify-content: center;
+  flex-direction: row;
+  padding: 10px;
+}
+.text{
+  margin-right: 10px;
+}
+.submit{
+  margin-left: 10px;
+}
 .card {
   display: flex;
   align-items: center;
@@ -6,7 +18,7 @@
   background-image: var(--backgroundimg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 50%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5rem;
@@ -15,5 +27,22 @@
   justify-content: space-around;
   transition: all .5s;
   border-radius: 20px;
-  height: 50vh;
+}
+.name{
+  background-color: white;
+  text-align: center;
+  border: solid 5px black;
+  width: 90%;
+  transition: all .3s;
+  height: 50%;
+}
+.name:hover{
+  scale: 105%;
+}
+#name{
+  width: 25%;
+  padding: 3px;
+}
+#price{
+  padding: 7px;
 }

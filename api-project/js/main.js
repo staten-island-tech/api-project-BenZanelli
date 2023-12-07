@@ -1,4 +1,3 @@
-
 DOMSelectors ={
     form: document.querySelector("#form"),
     itemname: document.querySelector("#item-name"),
@@ -15,39 +14,41 @@ async function getData(){
     if (response.status !=200){
         throw new Error(response.statusText);
     }
-    const data = await response.json();
-    let id= "adosfhadskf"
-    function dmg(x){
-        x = data.damage.damage_type.index;
-        console.log(x)
-    if(x == ""){
-        x = "hi"
-        console.log("Hi")
+    const data = await response.json(); 
+    let id = ""
+    if(data.hasOwnProperty("damage")){
+        id = data.damage.damage_type.index
+    }else if(data.hasOwnProperty("heal_at_slot_level")){
+        id= "heal"
+    }else{
+        id=data.school.index
     }
-console.log(x)
-}
-    dmg(id)
-    console.log(id)
-    console.log(data.name, data.damage.damage_type.index);
-    DOMSelectors.parent.insertAdjacentHTML(
+    console.log(data.name, id);
+   DOMSelectors.parent.insertAdjacentHTML(
         "beforeend",
         `<div class='card' id=${id}>
         <h2 id="name" class="name">${data.name}</h2>
         <h3 id="price" class="name">${data.desc}</h3>
+        <button class="btn">REMOVE</button>
         </div>`
-    )} catch (error){
-        DOMSelectors.parent.insertAdjacentHTML(
-            "beforeend",
-            `<div class='card'>
-            <h2 id="name" class="name">Not Found</h2>
-            </div>`
-        )}
+    )
+    } catch (error){
+       alert("Enter a valid spell")
+    }
 }
 function clearfields(){
     DOMSelectors.itemname.value = ''
 }
+function byebye(){
+    let buttons = document.querySelectorAll(".btn")
+    buttons.forEach((btn)=> btn.addEventListener('click', function(event){
+        btn.parentElement.remove();
+    }))
+}
 DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
     getData();
-    clearfields()
+    clearfields();
+    byebye()
 });
+
