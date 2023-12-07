@@ -9,11 +9,28 @@
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
   padding: 3px;
   box-shadow:10px 7px 10px black;
   justify-content: space-around;
   transition: all .5s;
   border-radius: 20px;
   height: 50vh;
+}
+.name{
+  background-color: white;
+  border: solid 5px black;
+  width: 90%;
+  text-align: center;
+  padding: 5px;
+}
+#price{
+  font-size: 1.5rem;
+  transition: all .3s;
+}
+.name:hover{
+  scale: 105%;
+}
+#name {
+  width: 10%;
 }

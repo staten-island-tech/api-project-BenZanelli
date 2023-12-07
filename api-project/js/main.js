@@ -3,6 +3,7 @@ DOMSelectors ={
     form: document.querySelector("#form"),
     itemname: document.querySelector("#item-name"),
     parent: document.querySelector(".container"),
+    bye:document.querySelectorAll(".remove"),
 }
 async function getData(){
     let thing = DOMSelectors.itemname.value.toLowerCase();
@@ -31,15 +32,17 @@ console.log(x)
     console.log(data.name, data.damage.damage_type.index);
     DOMSelectors.parent.insertAdjacentHTML(
         "beforeend",
-        `<div class='card' id=${id}>
+        `<div class='card' id=${data.damage.damage_type.index}>
         <h2 id="name" class="name">${data.name}</h2>
         <h3 id="price" class="name">${data.desc}</h3>
+        <button class="but">REMOVE</button>
         </div>`
     )} catch (error){
         DOMSelectors.parent.insertAdjacentHTML(
             "beforeend",
             `<div class='card'>
             <h2 id="name" class="name">Not Found</h2>
+            <button class="but">REMOVE</button>
             </div>`
         )}
 }
@@ -49,5 +52,12 @@ function clearfields(){
 DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
     getData();
-    clearfields()
+    clearfields();
+    getrid();
 });
+function getrid(){
+    let buttons = document.querySelectorAll(".but")
+    buttons.forEach((btn)=> btn.addEventListener('click', function(event){
+        btn.parentElement.remove();
+    }))
+} 
