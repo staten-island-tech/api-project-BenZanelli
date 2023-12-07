@@ -11,9 +11,28 @@
 .submit{
   margin-left: 10px;
 }
+.container1{
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: space-around;
+}
+.catalouges{
+  display: flex; 
+  flex-direction: column;  
+  background-image: var(--backgroundimg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 5%;
+  margin-bottom: 1.5rem;
+  padding: 3px;
+  box-shadow:10px 7px 10px black;
+  justify-content: space-around;
+  transition: all .5s;
+  border-radius: 20px;
+}
 .card {
   display: flex;
-  align-items: center;
+  align-items: center;  
   flex-direction: column;  
   background-image: var(--backgroundimg);
   background-size: cover;
