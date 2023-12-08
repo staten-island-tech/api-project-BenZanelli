@@ -9,50 +9,37 @@ async function populate(){
     console.log(URL2)
     const response = await fetch(URL2);
     const data = await response.json();
-     for(i=0;i<data.length;i++){
-        const thing = data.results[i];
-        console.log(thing) 
+     for(i=0;i<data.length;i++){   
     }
-    /*
-    let asdf = `https://www.dnd5eapi.co/api/spells/`
-    console.log(asdf)
-    const response2 = await fetch(asdf)
-    const data2 = await response2.json();  */
-
     try {
         console.log(response);
-    /*     console.log(response2) */
     if (response.status !=200){
         throw new Error(response.statusText);
     }
-
-        let id = ""
-     /* if(data.hasOwnProperty("damage")){
-        id = data.damage.damage_type.index
-    }else if(data.hasOwnProperty("heal_at_slot_level")){
-        id= "heal"
-    }else{
-        id=data.school.index
-    } */ 
-
+    data.results.forEach((link)=> thing(link.url));
+    let id ="ok"
+   async function thing(x){
+        let url = "https://www.dnd5eapi.co"+x;
+        const response2 = await fetch(url);
+        const data2 = await response2.json();
+        if(data2.hasOwnProperty("damage")){
+           id=data2.damage.damage_type.index
+         
+        }else if(data2.hasOwnProperty("heal_at_slot_level")){
+            id= "heal"
+        }else{
+            id=data2.school.index
+           
+            return id
+        }}
     data.results.forEach(element => DOMSelectors.parent1.insertAdjacentHTML(
         "beforeend",
-        `<div class='catalouges' class='${element.index}' id="${element.index}">
+        `<div class='catalouges' id="${id}">
         <h2 id="asdf" class="title">${element.name}</h2>
         </div>`
     ));
-    let div = document.querySelectorAll(".catalouges")
-    
 }
-catch (error){
-        alert("Enter a valid spell")
-     }
-    
-    
-
-
-
-} 
+catch (error){alert("Enter a valid spell")}} 
 populate()
 async function getData(){
     let thing = DOMSelectors.itemname.value.toLowerCase();
