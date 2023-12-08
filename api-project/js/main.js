@@ -2,22 +2,26 @@ DOMSelectors ={
     form: document.querySelector("#form"),
     itemname: document.querySelector("#item-name"),
     parent1: document.querySelector(".container1"),
-    parent2: document.querySelector(".container2")
+    parent2: document.querySelector(".container2"),
 }
+let URL2 = `https://www.dnd5eapi.co/api/spells/`; 
 async function populate(){
-    let URL = `https://www.dnd5eapi.co/api/spells/`; 
-    
-    console.log(URL)
-    const response = await fetch(URL);
+    console.log(URL2)
+    const response = await fetch(URL2);
     const data = await response.json();
-    let index = 
-    let URL2 = `https://www.dnd5eapi.co/api/spells/`;
-    const response2 = await fetch(URL2)
-    const data2 = await response2.json(); 
-    
+     for(i=0;i<data.length;i++){
+        const thing = data.results[i];
+        console.log(thing) 
+    }
+    /*
+    let asdf = `https://www.dnd5eapi.co/api/spells/`
+    console.log(asdf)
+    const response2 = await fetch(asdf)
+    const data2 = await response2.json();  */
+
     try {
         console.log(response);
-        console.log(response2)
+    /*     console.log(response2) */
     if (response.status !=200){
         throw new Error(response.statusText);
     }
@@ -30,12 +34,15 @@ async function populate(){
     }else{
         id=data.school.index
     } */ 
+
     data.results.forEach(element => DOMSelectors.parent1.insertAdjacentHTML(
         "beforeend",
-        `<div class='catalouges' id="hi">
+        `<div class='catalouges' class='${element.index}' id="${element.index}">
         <h2 id="asdf" class="title">${element.name}</h2>
         </div>`
     ));
+    let div = document.querySelectorAll(".catalouges")
+    
 }
 catch (error){
         alert("Enter a valid spell")
@@ -83,12 +90,13 @@ async function getData(){
 function clearfields(){
     DOMSelectors.itemname.value = ''
 }
-function byebye(){
-    let buttons = document.querySelectorAll(".btn")
-    buttons.forEach((btn)=> btn.addEventListener('click', function(event){
-        btn.parentElement.remove();
-    }))
-}
+function byebye() {
+    DOMSelectors.parent2.addEventListener('click', function(event) {
+        if (event.target.classList.contains('btn')) {
+            event.target.parentElement.remove();
+        }
+    })}
+    
 DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
     getData();

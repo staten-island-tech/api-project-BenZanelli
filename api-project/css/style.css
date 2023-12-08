@@ -1,4 +1,7 @@
 @import url(variables.css);
+body{
+  background-color: ;
+}
 #form{
   display: flex;
  justify-content: center;
@@ -22,13 +25,15 @@
   background-image: var(--backgroundimg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 5%;
+  width: 15%;
   margin-bottom: 1.5rem;
   padding: 3px;
   box-shadow:10px 7px 10px black;
   justify-content: space-around;
   transition: all .5s;
   border-radius: 20px;
+  font-size: .8rem;
+  text-align: center;
 }
 .card {
   display: flex;

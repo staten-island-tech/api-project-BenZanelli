@@ -16,7 +16,7 @@
     --physcialimg: url('../public/psychical.jfif');
     --healimmg: url('../public/heal.jpg');
     --abjurationimg: url('../public/abjuration.jpg');
-    --alterationimg: url('../public/alteration.png');
+    --transmutationimg: url('../public/alteration.png');
     --conjurationimg: url('../public/conjuration.webp');
     --divinationimg: url('../public/divination.webp');
     --enchantmentimg: url('../public/enchantment.webp');
@@ -76,7 +76,7 @@
 #abjuration{
     --backgroundimg:var(--abjurationimg)
 }
-#alteration{
+#transmutation{
     --backgroundimg:var(--alterationimg)
 }
 #conjuration{
