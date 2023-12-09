@@ -9,8 +9,6 @@ async function populate(){
     console.log(URL2)
     const response = await fetch(URL2);
     const data = await response.json();
-     for(i=0;i<data.length;i++){   
-    }
     try {
         console.log(response);
     if (response.status !=200){
@@ -23,14 +21,11 @@ async function populate(){
         const response2 = await fetch(url);
         const data2 = await response2.json();
         if(data2.hasOwnProperty("damage")){
-           id=data2.damage.damage_type.index
-         
+           id="wow"
         }else if(data2.hasOwnProperty("heal_at_slot_level")){
             id= "heal"
         }else{
-            id=data2.school.index
-           
-            return id
+            id="pow!"
         }}
     data.results.forEach(element => DOMSelectors.parent1.insertAdjacentHTML(
         "beforeend",
