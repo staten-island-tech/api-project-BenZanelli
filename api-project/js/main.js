@@ -14,25 +14,27 @@ async function populate(){
     if (response.status !=200){
         throw new Error(response.statusText);
     }
+    console.log("https://www.dnd5eapi.co/api/spells/power-word-stun")
     data.results.forEach((link)=> thing(link.url));
-    let id ="ok"
    async function thing(x){
+        let id ="ok"
         let url = "https://www.dnd5eapi.co"+x;
         const response2 = await fetch(url);
         const data2 = await response2.json();
         if(data2.hasOwnProperty("damage")){
-           id="wow"
+           id= data2.damage.damage_type.index
+           console.log(data2.damage.damage_type.index, data2.name)
         }else if(data2.hasOwnProperty("heal_at_slot_level")){
             id= "heal"
         }else{
-            id="pow!"
-        }}
-    data.results.forEach(element => DOMSelectors.parent1.insertAdjacentHTML(
+            id= data2.school.index
+        } DOMSelectors.parent1.insertAdjacentHTML(
         "beforeend",
         `<div class='catalouges' id="${id}">
-        <h2 id="asdf" class="title">${element.name}</h2>
+        <h2 id="asdf" class="title">${data2.name}</h2>
         </div>`
-    ));
+    );}
+    
 }
 catch (error){alert("Enter a valid spell")}} 
 populate()
@@ -85,4 +87,10 @@ DOMSelectors.form.addEventListener("submit", function(event) {
     clearfields();
     byebye()
 });
-
+function expand(){
+    let btn = document.querySelectorAll(".catalouges")
+    btn.forEach((el)=> el.addEventListener("click", function(){
+        console.log("hi")
+    }))
+}
+expand()

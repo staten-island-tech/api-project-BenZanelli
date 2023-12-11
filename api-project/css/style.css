@@ -17,20 +17,33 @@
  justify-content: space-around;
 }
 .catalouges{
-  display: flex; 
+  display: flex;
+  align-items: center;  
   flex-direction: column;  
   background-image: var(--backgroundimg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 15%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1.5rem;
   padding: 3px;
   box-shadow:10px 7px 10px black;
   justify-content: space-around;
   transition: all .5s;
   border-radius: 20px;
-  font-size: .8rem;
+  height: 15vh;
+}
+.catalouges:hover{
+  scale: 110%;
+}
+.title {
+  background-color: white;
   text-align: center;
+  border: solid 5px black;
+  width: 70%;
+  transition: all .3s;
+  font-size: 1.3rem;
 }
 .card {
   display: flex;

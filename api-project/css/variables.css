@@ -20,9 +20,11 @@
     --conjurationimg: url('../public/conjuration.webp');
     --divinationimg: url('../public/divination.webp');
     --enchantmentimg: url('../public/enchantment.webp');
-    --illusionimg: url('../public/illusion.webp');
+    --illusionimg: url('../public/illusion.jpg');
     --invocationimg: url('../public/invocation.jpg');
     --necromancyimg: url('../public/necromancy.jpg');
+    --transmutationimg: url('../public/transmutation.webp');
+    --evocationimg: url('../public/evocation.webp');
      --backgroundimg: url("");
 }
 #acid {
@@ -62,7 +64,7 @@
     --backgroundimg:var(--thunderimg)
 }
 #poison{
-    --backgroundimg:var(--poisionimg)
+    --backgroundimg:var(--poisonimg)
 }
 #elemental{
     --backgroundimg:var(--elementalimg)
@@ -96,4 +98,10 @@
 }
 #necromancy{
     --backgroundimg:var(--necromancyimg)
+}
+#transmutation{
+    --backgroundimg:var(--transmutationimg)
+}
+#evocation{
+    --backgroundimg:var(--evocationimg)
 }
