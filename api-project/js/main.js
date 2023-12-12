@@ -14,16 +14,16 @@ async function populate(){
     if (response.status !=200){
         throw new Error(response.statusText);
     }
-    console.log("https://www.dnd5eapi.co/api/spells/power-word-stun")
     data.results.forEach((link)=> thing(link.url));
    async function thing(x){
         let id ="ok"
         let url = "https://www.dnd5eapi.co"+x;
         const response2 = await fetch(url);
         const data2 = await response2.json();
+        console.log(data2)
         if(data2.hasOwnProperty("damage")){
            id= data2.damage.damage_type.index
-           console.log(data2.damage.damage_type.index, data2.name)
+
         }else if(data2.hasOwnProperty("heal_at_slot_level")){
             id= "heal"
         }else{
