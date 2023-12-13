@@ -11,41 +11,64 @@
 .submit{
   margin-left: 10px;
 }
-.container1{
+.header{
   display: flex;
   flex-wrap: wrap;
  justify-content: space-around;
 }
-.catalouges{
+.container1{
   display: flex;
-  align-items: center;  
-  flex-direction: column;  
-  background-image: var(--backgroundimg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 15%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  padding: 3px;
-  box-shadow:10px 7px 10px black;
-  justify-content: space-around;
-  transition: all .5s;
-  border-radius: 20px;
-  height: 15vh;
-}
-.catalouges:hover{
-  scale: 110%;
-}
-.title {
-  background-color: white;
-  text-align: center;
-  border: solid 5px black;
-  width: 70%;
-  transition: all .3s;
-  font-size: 1.3rem;
+  flex-wrap: wrap;
+ justify-content: space-around;
+ 
 }
 .card {
+  box-sizing: border-box;
+  width: 15%;
+  height: 254px;
+  border: 1px solid white;
+  box-shadow: 12px 17px 20px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  background-color: rgb(255, 255, 255);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  flex-direction: column;
+}
+
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+  background-color: rgb(251, 144, 144);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+.title {
+  text-align: center;
+  width: 70%;
+  transition: all .3s;
+  font-size: 1.5rem;
+  margin-top: 50px;
+}
+
+.img{
+  content: url("https://static.thenounproject.com/png/920503-200.png");
+  width: 10%;
+  margin-top: 50px;
+}
+
+.newcard {
   display: flex;
   align-items: center;  
   flex-direction: column;  
