@@ -16,6 +16,21 @@
   flex-wrap: wrap;
  justify-content: space-around;
 }
+.spells{
+  border-radius: 50%;
+  width: 7%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.image{
+  border: 10px solid black;
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  height: 110px;
+}
 .container1{
   display: flex;
   flex-wrap: wrap;
