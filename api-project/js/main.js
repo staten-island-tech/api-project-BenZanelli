@@ -74,6 +74,8 @@ DOMSelectors.form.addEventListener("submit", function(event) {
     clearfields();
     byebye()
 }); */
+
+button.addEventListener('click',clicked)
 function expand(){
     let btn = document.querySelectorAll(".cards")
     btn.forEach((el)=> el.addEventListener("click", function(){
