@@ -3,11 +3,13 @@ DOMSelectors ={
     itemname: document.querySelector("#item-name"),
     parent1: document.querySelector(".container1"),
     parent2: document.querySelector(".container2"),
+    h2s: document.querySelectorAll(".h2s"),
+    filtering: document.querySelectorAll(".spells"),
 }
 let URL2 = `https://www.dnd5eapi.co/api/spells/`; 
-async function populate(){
-    console.log(URL2)
-    const response = await fetch(URL2);
+async function populate(x){
+    console.log(x)
+    const response = await fetch(x);
     const data = await response.json();
     try {
         console.log(response);
@@ -24,7 +26,7 @@ async function populate(){
     
 }
 catch (error){alert("Enter a valid spell")}} 
-populate()
+populate(URL2)
 async function getData(){
     let thing = DOMSelectors.itemname.value.toLowerCase();
     thing = thing.replaceAll(' ','-')
@@ -75,7 +77,27 @@ DOMSelectors.form.addEventListener("submit", function(event) {
     byebye()
 }); */
 
-button.addEventListener('click',clicked)
+function filters(){
+    DOMSelectors.h2s.forEach((el)=> el.addEventListener("click", function(){
+        let category = el.textContent.toLowerCase()
+        console.log(category)
+        async function real(){
+            if(category==="all spells"){
+            console.log("boo")
+            DOMSelectors.parent1.innerHTML = ""
+            populate(URL2)
+        }else{
+            let newURL =  `https://www.dnd5eapi.co/api/classes/${category}/spells`;
+            console.log(newURL)
+            DOMSelectors.parent1.innerHTML = ""
+            populate(newURL)
+        }
+        }
+        real()
+
+    }))
+}
+filters()
 function expand(){
     let btn = document.querySelectorAll(".cards")
     btn.forEach((el)=> el.addEventListener("click", function(){
