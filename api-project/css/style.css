@@ -22,7 +22,7 @@
   height: 15vh;
   display: flex;
   flex-direction: column;
-
+  margin-top: 20px;
 }
 .image{
   width: 100%;
@@ -34,7 +34,8 @@
   opacity: .4;
 }
 .image:hover{
-  border: 8px solid rgb(0, 0, 0);
+  outline: 8px solid rgb(0, 0, 0);
+  outline-offset: 10px;
   opacity: 1;
 }
 
