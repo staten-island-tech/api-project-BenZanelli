@@ -1,3 +1,4 @@
+/* import { getData } from "./expands";*/
 DOMSelectors ={
     form: document.querySelector("#form"),
     itemname: document.querySelector("#item-name"),
@@ -5,6 +6,8 @@ DOMSelectors ={
     parent2: document.querySelector(".container2"),
     h2s: document.querySelectorAll(".h2s"),
     filtering: document.querySelectorAll(".spells"),
+    allcards: document.querySelectorAll(".card"),
+    thing: document.querySelectorAll(".title")
 }
 let URL2 = `https://www.dnd5eapi.co/api/spells/`; 
 async function populate(x){
@@ -18,19 +21,60 @@ async function populate(x){
     }
    data.results.forEach((el)=>DOMSelectors.parent1.insertAdjacentHTML(
         "beforeend",
-        `<div class='card' id="card">
+        `<div class='card' id=${el.index}>
         <h2 id="asdf" class="title">${el.name}</h2>
         <img class="img">
         </div>`
     ));
-    
+    expands()
 }
 catch (error){alert("Enter a valid spell")}} 
 populate(URL2)
-async function getData(){
-    let thing = DOMSelectors.itemname.value.toLowerCase();
-    thing = thing.replaceAll(' ','-')
-    let URL = `https://www.dnd5eapi.co/api/spells/${thing}`; 
+
+/* function clearfields(){
+    DOMSelectors.itemname.value = ''
+}
+function byebye() {
+    DOMSelectors.parent2.addEventListener('click', function(event) {
+        if (event.target.classList.contains('btn')) {
+            event.target.parentElement.remove();
+        }
+    })}
+    
+DOMSelectors.form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    getData();
+    clearfields();
+    byebye()
+}); */
+function filters(){
+    DOMSelectors.filtering.forEach((el) => el.addEventListener("click", wabungus));
+function wabungus(){
+    let category = this.id
+async function real(){
+    if(category==="all"){
+    DOMSelectors.parent1.innerHTML = ""
+    DOMSelectors.parent2.innerHTML = ""
+    populate(URL2)
+}else{
+    let newURL =  `https://www.dnd5eapi.co/api/classes/${category}/spells`;
+    DOMSelectors.parent1.innerHTML = ""
+    DOMSelectors.parent2.innerHTML = ""
+    populate(newURL)
+}}
+real()
+}}
+filters()
+function expands(){
+    let x = document.querySelectorAll(".card")
+    x.forEach((el)=>el.addEventListener("click", async function(){
+        getData(this.id)
+    }))
+}
+expands()
+async function getData(x){
+    DOMSelectors.parent1.innerHTML="";
+    let URL = `https://www.dnd5eapi.co/api/spells/${x}`; 
     console.log(URL)
     try {
         const response = await fetch(URL);
@@ -53,55 +97,18 @@ async function getData(){
         `<div class='newcard' id=${id}>
         <h2 id="name" class="name">${data.name}</h2>
         <h3 id="price" class="name">${data.desc}</h3>
-        <button class="btn">REMOVE</button>
+        <button class="btn">BACK</button>
         </div>`
     )
     } catch (error){
        alert("Enter a valid spell")
     }
 }
-/* function clearfields(){
-    DOMSelectors.itemname.value = ''
-}
 function byebye() {
     DOMSelectors.parent2.addEventListener('click', function(event) {
         if (event.target.classList.contains('btn')) {
-            event.target.parentElement.remove();
+        DOMSelectors.parent2.innerHTML=""
+        populate(URL2)
         }
     })}
-    
-DOMSelectors.form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    getData();
-    clearfields();
     byebye()
-}); */
-
-function filters(){
-    DOMSelectors.h2s.forEach((el)=> el.addEventListener("click", function(){
-        let category = el.textContent.toLowerCase()
-        console.log(category)
-        async function real(){
-            if(category==="all spells"){
-            console.log("boo")
-            DOMSelectors.parent1.innerHTML = ""
-            populate(URL2)
-        }else{
-            let newURL =  `https://www.dnd5eapi.co/api/classes/${category}/spells`;
-            console.log(newURL)
-            DOMSelectors.parent1.innerHTML = ""
-            populate(newURL)
-        }
-        }
-        real()
-
-    }))
-}
-filters()
-function expand(){
-    let btn = document.querySelectorAll(".cards")
-    btn.forEach((el)=> el.addEventListener("click", function(){
-        console.log("hi")
-    }))
-}
-expand()
