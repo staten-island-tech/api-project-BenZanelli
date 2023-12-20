@@ -84,19 +84,28 @@ async function getData(x){
     }
     const data = await response.json(); 
     let id = ""
+    let dmg = ""
     if(data.hasOwnProperty("damage")){
-        id = data.damage.damage_type.index
+        id = data.damage.damage_type.index.toLowerCase()
+        dmg = ", "+data.damage.damage_type.name
+   
     }else if(data.hasOwnProperty("heal_at_slot_level")){
         id= "heal"
+        dmg= ", Healing"
+     
     }else{
         id=data.school.index
+        dmg=""
     }
+
     console.log(data.name, id);
    DOMSelectors.parent2.insertAdjacentHTML(
         "afterbegin",
         `<div class='newcard' id=${id}>
         <h2 id="name" class="name">${data.name}</h2>
         <h3 id="price" class="name">${data.desc}</h3>
+        <h4 id="school" class="name">${data.school.name}${dmg}</h4>
+        <h5 id="time" class="name">${data.casting_time}</h5>
         <button class="btn">BACK</button>
         </div>`
     )
