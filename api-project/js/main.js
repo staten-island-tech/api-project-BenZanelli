@@ -28,13 +28,14 @@ async function populate(x){
     ));
     expands()
 }
-catch (error){alert("Enter a valid spell")}} 
+catch (error){alert("404 not found")}} 
 populate(URL2)
 
-/* function clearfields(){
+function clearfields(){
     DOMSelectors.itemname.value = ''
-}
-function byebye() {
+} 
+
+/* function byebye() {
     DOMSelectors.parent2.addEventListener('click', function(event) {
         if (event.target.classList.contains('btn')) {
             event.target.parentElement.remove();
@@ -73,7 +74,7 @@ function expands(){
 }
 expands()
 async function getData(x){
-    DOMSelectors.parent1.innerHTML="";
+
     let URL = `https://www.dnd5eapi.co/api/spells/${x}`; 
     console.log(URL)
     try {
@@ -81,13 +82,14 @@ async function getData(x){
         console.log(response);
     if (response.status !=200){
         throw new Error(response.statusText);
-    }
+    }  
+    DOMSelectors.parent1.innerHTML="";
     const data = await response.json(); 
     let id = ""
     let dmg = ""
     if(data.hasOwnProperty("damage")){
         id = data.damage.damage_type.index.toLowerCase()
-        dmg = ", "+data.damage.damage_type.name
+        dmg = ", "+data.damage.damage_type.name+" Damage"
    
     }else if(data.hasOwnProperty("heal_at_slot_level")){
         id= "heal"
@@ -110,9 +112,20 @@ async function getData(x){
         </div>`
     )
     } catch (error){
-       alert("Enter a valid spell")
+       alert("Spell not Found")
     }
 }
+function insert(){
+    DOMSelectors.form.addEventListener('submit',function(event){
+        event.preventDefault()
+        let x = DOMSelectors.itemname.value.toLowerCase()
+        let y = x.replaceAll(' ','-')
+        console.log(y)
+        getData(y)
+        clearfields()
+    })
+}
+insert()
 function byebye() {
     DOMSelectors.parent2.addEventListener('click', function(event) {
         if (event.target.classList.contains('btn')) {

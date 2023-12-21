@@ -1,11 +1,11 @@
 :root{
-    --acidimg: url('../public/acid.jfif');
+    --acidimg: url('../public/acid2.webp');
     --fireimg: url('../public/fire.avif');
     --forceimg: url('../public/fire.avif');
     --coldimg: url('../public/fire.avif');
     --psychicimg: url('../public/fire.avif');
     --necroticimg:url('../public/necrotic.jfif');
-    --slashingimg:url('../public/slasher.jfif');
+    --slashingimg:url('../public/slashing.webp');
     --piercingimg: url('../public/piercing.jfif');
     --bludgeoningimg: url('../public/bludgeoning.jfif');
     --lightningimg: url('../public/lightning.jfif'); 
@@ -15,12 +15,12 @@
     --elementalimg: url('../public/elemental.jfif');
     --physcialimg: url('../public/psychical.jfif');
     --healimmg: url('../public/heal.jpg');
-    --abjurationimg: url('../public/abjuration.jpg');
+    --abjurationimg: url('../public/abjuration.png');
     --transmutationimg: url('../public/alteration.png');
     --conjurationimg: url('../public/conjuration.webp');
     --divinationimg: url('../public/divination.webp');
-    --enchantmentimg: url('../public/enchantment.webp');
-    --illusionimg: url('../public/illusion.jpg');
+    --enchantmentimg: url('../public/enchantment.avif');
+    --illusionimg: url('../public/illusion.avif');
     --invocationimg: url('../public/invocation.jpg');
     --necromancyimg: url('../public/necromancy.jpg');
     --transmutationimg: url('../public/transmutation.webp');
