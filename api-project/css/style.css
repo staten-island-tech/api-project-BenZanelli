@@ -23,9 +23,8 @@
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  margin-bottom: 40px;
-}
-.h2s{
+  margin-bottom: 15vh;
+  font-size: .9rem;
   text-align: center;
 }
 .image{
@@ -71,13 +70,11 @@
   overflow-wrap: break-word;
   flex-direction: column;
 }
-
 .card:hover {
   border: 1px solid black;
   transform: scale(1.05);
   background-color: rgb(248, 234, 234);
 }
-
 .card:active {
   transform: scale(0.95) rotateZ(1.7deg);
 }
@@ -88,13 +85,11 @@
   font-size: 1.5rem;
   margin-top: 50px;
 }
-
 .img{
   content: url("https://static.thenounproject.com/png/920503-200.png");
   width: 10%;
   margin-top: 50px;
 }
-
 .newcard {
   display: flex;
   align-items: center;  
@@ -107,8 +102,7 @@
   margin-right: auto;
   margin-bottom: 1.5rem;
   padding: 3px;
-  box-shadow:10px 7px 10px black;
-  
+  box-shadow:10px 7px 10px black; 
   transition: all .5s;
   border-radius: 20px;  
 }
@@ -118,10 +112,7 @@
   border: solid 5px black;
   width: 90%;
   transition: all .3s;
-  font-size: 2rem;
-}
-.name:hover{
-  scale: 105%;
+  font-size:1.5rem;
 }
 #name{
   width: 25%;
@@ -139,50 +130,52 @@
   padding: 2px;
 }
 .btn {
-  font-size: 17px;
-  background: transparent;
-  border: none;
-  padding: 1em 1.5em;
-  color: #ffedd3;
-  text-transform: uppercase;
+  outline: solid 5px black;
   position: relative;
-  transition: .5s ease;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background-color: #ffc506;
-  transition: .5s ease;
-}
-
-.btn:hover {
-  color: #1e1e2b;
-  transition-delay: .5s;
-}
-
-.btn:hover::before {
-  width: 100%;
-}
-
-.btn::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 0;
-  width: 100%;
-  background-color: #ffc506;
-  transition: .4s ease;
-  z-index: -1;
-}
-
-.btn:hover::after {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all .2s;
+  border: none;
+  color: black;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 50px;
+ }
+ 
+ 
+ .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn::after {
+  outline: 5px black solid;
+  content: "";
+  display: inline-block;
   height: 100%;
-  transition-delay: 0.4s;
-  color: aliceblue;
-}
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+ }
+ 
+ .btn::after {
+  background-color: #fff;
+ }
+ 
+ .btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+ }

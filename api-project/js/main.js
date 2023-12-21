@@ -119,5 +119,5 @@ function byebye() {
         DOMSelectors.parent2.innerHTML=""
         populate(URL2)
         }
-    })}
-    byebye()
+})}
+byebye()
