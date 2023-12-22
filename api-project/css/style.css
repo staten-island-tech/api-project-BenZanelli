@@ -1,4 +1,7 @@
 @import url(variables.css);
+html{
+  background-color: #515151;
+}
 #form{
   display: flex;
  justify-content: center;
@@ -15,8 +18,8 @@
   display: flex;
   flex-wrap: wrap;
  justify-content: space-around;
- background-color: rgb(240, 237, 237);
- border-radius: 10px;
+ background-color: rgb(193, 193, 193);
+ border-radius: 20px;
  flex-direction: column;
  margin-top: 10px;
  margin-bottom: 10px;
@@ -41,6 +44,7 @@
 margin-right: 10px;
 }
 .spells{
+  margin-right: 10px;
   border-radius: 50%;
   width: 7%;
   height: 15vh;
@@ -62,7 +66,7 @@ margin-right: 10px;
 }
 .image:hover{
   outline: 5px solid rgb(0, 0, 0);
-  outline-offset: 7px;
+  outline-offset: 2px;
   opacity: 1;
 }
 
@@ -97,7 +101,7 @@ margin-right: 10px;
 .card:hover {
   border: 1px solid black;
   transform: scale(1.05);
-  background-color: rgb(248, 234, 234);
+  background-color: rgb(180, 144, 144);
 }
 .card:active {
   transform: scale(0.95) rotateZ(1.7deg);
@@ -115,6 +119,7 @@ margin-right: 10px;
   margin-top: 50px;
 }
 .newcard {
+  margin-top: 15px;
   display: flex;
   align-items: center;  
   flex-direction: column;  
@@ -126,7 +131,7 @@ margin-right: 10px;
   margin-right: auto;
   margin-bottom: 1.5rem;
   padding: 3px;
-  box-shadow:10px 7px 10px black; 
+  box-shadow:3px 3px 6px rgb(53, 51, 51); 
   transition: all .5s;
   border-radius: 20px;  
 }
@@ -197,4 +202,83 @@ margin-right: 10px;
  .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+ }
+ .wave-group {
+  position: relative;
+}
+
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid rgb(75, 71, 71);
+  background: transparent;
+}
+
+.wave-group .input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: #4a4949;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * .05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: rgb(75, 71, 71);
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.wave-group .bar:before,.wave-group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: rgb(75, 71, 71);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+
+ @media screen and (max-width:1000px) {
+    .card{width: 30%;}
+    .spells{font-size: .51rem; width: 9%; margin-right: 16px;}
+    .image:hover{outline-offset: 1px;}
+    .classes{margin-bottom: -40px;}  
  }

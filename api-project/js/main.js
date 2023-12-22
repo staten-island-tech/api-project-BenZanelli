@@ -22,8 +22,8 @@ async function populate(x){
    data.results.forEach((el)=>DOMSelectors.parent1.insertAdjacentHTML(
         "beforeend",
         `<div class='card' id=${el.index}>
-        <h2 id="asdf" class="title">${el.name}</h2>
-        <img class="img">
+        <h3 id="asdf" class="title">${el.name}</h3>
+        <img class="img" alt="plus-sign">
         </div>`
     ));
     expands()
@@ -84,6 +84,7 @@ async function getData(x){
         throw new Error(response.statusText);
     }  
     DOMSelectors.parent1.innerHTML="";
+    DOMSelectors.parent2.innerHTML="";
     const data = await response.json(); 
     let id = ""
     let dmg = ""
