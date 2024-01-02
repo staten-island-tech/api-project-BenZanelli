@@ -100,7 +100,6 @@ async function getData(x){
         id=data.school.index
         dmg=""
     }
-
     console.log(data.name, id);
    DOMSelectors.parent2.insertAdjacentHTML(
         "afterbegin",
