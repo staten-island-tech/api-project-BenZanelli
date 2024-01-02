@@ -111,8 +111,8 @@ margin-right: 10px;
   width: 70%;
   transition: all .3s;
   font-size: 1.5rem;
-  margin-top: 50px;
-
+  margin-top: 0px;
+  font-weight: 900
 }
 .img{
   content: url("https://static.thenounproject.com/png/920503-200.png");
@@ -147,6 +147,7 @@ margin-right: 10px;
   border-radius: 10px;
   padding: .5%;
   margin-bottom: -10px;
+  font-weight: 900;
 }
 #name{
   width: 25%;

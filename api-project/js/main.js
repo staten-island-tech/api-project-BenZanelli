@@ -105,9 +105,9 @@ async function getData(x){
         "afterbegin",
         `<div class='newcard' id=${id}>
         <h2 id="name" class="name">${data.name}</h2>
-        <h3 id="price" class="name">${data.desc}</h3>
-        <h4 id="school" class="name">${data.school.name}${dmg}</h4>
-        <h5 id="time" class="name">${data.casting_time}</h5>
+        <p id="price" class="name">${data.desc}</p>
+        <h3 id="school" class="name">${data.school.name}${dmg}</h3>
+        <h4 id="time" class="name">${data.casting_time}</h4>
         <button class="btn">BACK</button>
         </div>`
     )

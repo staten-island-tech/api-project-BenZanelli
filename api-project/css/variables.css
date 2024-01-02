@@ -15,16 +15,16 @@
     --elementalimg: url('../public/elemental.jfif');
     --physcialimg: url('../public/psychical.jfif');
     --healimmg: url('../public/heal.jpg');
-    --abjurationimg: url('../public/abjuration.png');
-    --transmutationimg: url('../public/alteration.png');
-    --conjurationimg: url('../public/conjuration.webp');
-    --divinationimg: url('../public/divination.webp');
-    --enchantmentimg: url('../public/enchantment.avif');
-    --illusionimg: url('../public/illusion.avif');
-    --invocationimg: url('../public/invocation.jpg');
-    --necromancyimg: url('../public/necromancy.jpg');
-    --transmutationimg: url('../public/transmutation.webp');
-    --evocationimg: url('../public/evocation.webp');
+    --abjurationimg: url('../public/schools/abjuration.png');
+    --transmutationimg: url('../public/schools/transmutation.webp');
+    --conjurationimg: url('../public/schools/conjuration.webp');
+    --divinationimg: url('../public/schools/divination.webp');
+    --enchantmentimg: url('../public/schools/enchantment.avif');
+    --illusionimg: url('../public/schools/illusion.avif');
+    --invocationimg: url('../public/schools/invocation.jpg');
+    --necromancyimg: url('../public/schools/necromancy.jpg');
+    --transmutationimg: url('../public/schools/transmutation.webp');
+    --evocationimg: url('../public/schools/evocation.webp');
      --backgroundimg: url("");
 }
 #acid {
