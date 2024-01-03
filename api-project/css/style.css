@@ -61,7 +61,7 @@ margin-right: 10px;
   border-radius: 50%;
   height: 100px;
   aspect-ratio: 1/1;
-  transition: all .3s;
+  transition: all .1s;
   opacity: .4;
 }
 .image:hover{
@@ -280,7 +280,76 @@ margin-right: 10px;
 .wave-group .input:focus ~ .bar:after {
   width: 50%;
 }
+.button {
+  width: 90%;
+  height: 95%;
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
+ }
+ .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 91.5%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+     to left,
+     hsl(300, 1%, 22%) 0%,
+     hsl(340, 4%, 53%) 8%,
+     hsl(330, 4%, 31%) 92%,
+     hsl(340, 4%, 14%) 100%
+   );
+ }
+ 
+ .front {
+  
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: rgb(117, 110, 112);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform
+     600ms
+     cubic-bezier(.3, .7, .4, 1);
+ }
+ 
+ button:hover {
+  filter: brightness(110%);
+ }
+ 
+ button:hover .front {
+  transform: translateY(-3px);
+  transition: transform
+     250ms
+     cubic-bezier(.3, .7, .4, 1.5);
+ }
+ 
+ button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+ }
+ 
 
+ button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+ }
+ 
+ button:focus:not(:focus-visible) {
+  outline: none;
+ }
 
  @media screen and (max-width:1000px) {
     .card{width: 30%;}
