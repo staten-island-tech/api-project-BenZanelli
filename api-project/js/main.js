@@ -7,7 +7,10 @@ DOMSelectors ={
     h2s: document.querySelectorAll(".h2s"),
     filtering: document.querySelectorAll(".spells"),
     allcards: document.querySelectorAll(".card"),
-    thing: document.querySelectorAll(".title")
+    thing: document.querySelectorAll(".title"),
+    p1: document.querySelector(".pp"),
+    nothing:document.querySelector(".secret"),
+    header:document.querySelector(".header"),
 }
 let URL2 = `https://www.dnd5eapi.co/api/spells/`; 
 async function populate(x){
@@ -24,7 +27,7 @@ async function populate(x){
         `<div class='card' id=${el.index}>
         <h3 id="asdf" class="title">${el.name}</h3>
         <img class="img" alt="plus-sign">
-        </div>`
+        </div>`,
     ));
     expands()
 }
@@ -85,6 +88,7 @@ async function getData(x){
     }  
     DOMSelectors.parent1.innerHTML="";
     DOMSelectors.parent2.innerHTML="";
+    DOMSelectors.p1.innerHTML="";
     const data = await response.json(); 
     let id = ""
     let dmg = ""
@@ -134,3 +138,8 @@ function byebye() {
         }
 })}
 byebye()
+function shhh(){
+    DOMSelectors.nothing.addEventListener('click', function(event){
+
+    })
+}

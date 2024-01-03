@@ -61,7 +61,7 @@ margin-right: 10px;
   border-radius: 50%;
   height: 100px;
   aspect-ratio: 1/1;
-  transition: all .1s;
+  transition: all .05s;
   opacity: .4;
 }
 .image:hover{
@@ -69,7 +69,9 @@ margin-right: 10px;
   outline-offset: 2px;
   opacity: 1;
 }
-
+.image:active{
+  outline-offset: .1px;
+}
 .container1{
   display: flex;
   flex-wrap: wrap;
@@ -350,10 +352,32 @@ margin-right: 10px;
  button:focus:not(:focus-visible) {
   outline: none;
  }
-
- @media screen and (max-width:1000px) {
+.pp{
+  position: absolute;
+  margin-top: 12.2%;
+  margin-left: 40%;
+}
+.secret{
+  width: 1%;
+  height: 5vh;
+  position: absolute;
+  margin-left: 88%;
+  margin-bottom: 10%;
+  
+}
+ @media screen and (max-width:1200px) {
     .card{width: 30%;}
-    .spells{font-size: .51rem; width: 9%; margin-right: 16px;}
-    .image:hover{outline-offset: 1px;}
+    .spells{font-size: 1.2rem; width: 16%; margin-right: 16px;}
+    .image:hover{outline: 3px solid rgb(0, 0, 0); outline-offset: -1px}
     .classes{margin-bottom: -40px;}  
  }
+ @media screen and (max-width:750px) {
+  .spells{font-size: .6rem; width: 14%; margin-right: 16px;}
+  .image:hover{outline-offset: .3px;}
+  .classes{margin-bottom: -40px;}  
+  .name{font-size: .9rem;}
+ }
+@media screen and (max-width:400px) {
+  .spells{width: 21%; margin-right: 10%;}
+  .title{font-size: .9rem;}
+}

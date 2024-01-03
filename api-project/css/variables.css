@@ -1,17 +1,17 @@
 :root{
     --acidimg: url('../public/acid2.webp');
-    --fireimg: url('../public/fire.avif');
-    --forceimg: url('../public/fire.avif');
-    --coldimg: url('../public/fire.avif');
-    --psychicimg: url('../public/fire.avif');
-    --necroticimg:url('../public/necrotic.jfif');
+    --fireimg: url('../public/fire.jpg');
+    --forceimg: url('../public/force.jpg');
+    --coldimg: url('../public/cold.jfif');
+    --psychicimg: url('../public/psychic.jfif');
+    --necroticimg:url('../public/necrotic.png');
     --slashingimg:url('../public/slashing.webp');
     --piercingimg: url('../public/piercing.jfif');
     --bludgeoningimg: url('../public/bludgeoning.jfif');
-    --lightningimg: url('../public/lightning.jfif'); 
+    --lightningimg: url('../public/lightning.png'); 
     --radiantimg: url('../public/radiant.webp');
     --thunderimg: url('../public/thunder.png');
-    --poisonimg: url('../public/posion.jfif');
+    --poisonimg: url('../public/poison.jpg');
     --elementalimg: url('../public/elemental.jfif');
     --physcialimg: url('../public/psychical.jfif');
     --healimmg: url('../public/heal.jpg');
