@@ -354,16 +354,16 @@ margin-right: 10px;
  }
 .pp{
   position: absolute;
-  margin-top: 12.2%;
+  margin-top: -2vh;
   margin-left: 40%;
 }
 .secret{
   width: 1%;
   height: 5vh;
   position: absolute;
-  margin-left: 88%;
+  margin-left: 87%;
   margin-bottom: 10%;
-  
+  opacity: 0.001;
 }
  @media screen and (max-width:1200px) {
     .card{width: 30%;}

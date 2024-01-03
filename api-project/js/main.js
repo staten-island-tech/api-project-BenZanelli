@@ -29,6 +29,7 @@ async function populate(x){
         <img class="img" alt="plus-sign">
         </div>`,
     ));
+
     expands()
 }
 catch (error){alert("404 not found")}} 
@@ -88,7 +89,6 @@ async function getData(x){
     }  
     DOMSelectors.parent1.innerHTML="";
     DOMSelectors.parent2.innerHTML="";
-    DOMSelectors.p1.innerHTML="";
     const data = await response.json(); 
     let id = ""
     let dmg = ""
@@ -140,6 +140,19 @@ function byebye() {
 byebye()
 function shhh(){
     DOMSelectors.nothing.addEventListener('click', function(event){
+        DOMSelectors.parent2.innerHTML =""
+        DOMSelectors.parent1.innerHTML =""
+        DOMSelectors.p1.innerHTML=""
+        DOMSelectors.parent1.insertAdjacentHTML(
+            "beforeend",
+            `<div class="nana"><img src="https://media1.tenor.com/m/mJ_Og97j5WwAAAAC/chipi-chapa.gif">
+            <audio autoplay loop class="chippi">
+            <source src="./public/chipi.mp3" type="audio/mp3">
+            </audio>
+            </div>
+            `
 
+        )
     })
 }
+shhh()
