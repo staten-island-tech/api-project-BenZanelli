@@ -11,6 +11,7 @@ DOMSelectors ={
     p1: document.querySelector(".pp"),
     nothing:document.querySelector(".secret"),
     header:document.querySelector(".header"),
+    theme:document.querySelector(".slider")
 }
 let URL2 = `https://www.dnd5eapi.co/api/spells/`; 
 async function populate(x){
@@ -156,3 +157,16 @@ function shhh(){
     })
 }
 shhh()
+function themes(){
+    DOMSelectors.theme.addEventListener('click',function(){
+        if(document.body.classList.contains("darkmd")){
+            document.body.classList.remove("darkmd")
+            document.body.classList.add("lightmd")
+        }else{
+            document.body.classList.remove("lightmd")
+            document.body.classList.add("darkmd")
+        }
+    })
+
+    }
+themes()

@@ -26,6 +26,17 @@
     --transmutationimg: url('../public/schools/transmutation.webp');
     --evocationimg: url('../public/schools/evocation.webp');
      --backgroundimg: url("");
+     --backgroundcolordark: #515151;
+     --backgroundcolorlight: #f59184;
+     --backgroundcolor: #515151;
+     --background: #000000;
+
+}
+.darkmd{
+    --backgroundcolor: var(--backgroundcolordark)
+}
+.lightmd{
+    --backgroundcolor:var(--backgroundcolorlight)
 }
 #acid {
         --backgroundimg: var(--acidimg)

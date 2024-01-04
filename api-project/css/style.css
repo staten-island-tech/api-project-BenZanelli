@@ -1,6 +1,7 @@
 @import url(variables.css);
-html{
-  background-color: #515151;
+body{
+  transition: all .3s;
+  background-color: var(--backgroundcolor);
 }
 #form{
   display: flex;
@@ -365,6 +366,63 @@ margin-right: 10px;
   margin-bottom: 10%;
   opacity: 0.001;
 }
+.meow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+justify-content: center;
+  width: 3.5em;
+  height: 2em;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked + .slider {
+  background-color: #58564b;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
  @media screen and (max-width:1200px) {
     .card{width: 30%;}
     .spells{font-size: 1.2rem; width: 16%; margin-right: 16px;}
@@ -380,4 +438,6 @@ margin-right: 10px;
 @media screen and (max-width:400px) {
   .spells{width: 21%; margin-right: 10%;}
   .title{font-size: .9rem;}
+  .switch{margin-top: 5%; width: 3em; height: 1.5em;}
+  .slider:before{height: 1.2em; width: 1.2em; bottom: 10%;}
 }
