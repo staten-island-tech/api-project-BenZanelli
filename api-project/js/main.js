@@ -1,5 +1,5 @@
-/* import { getData } from "./expands";*/
-import "./css/style.css"
+/* import { getData } from './expands';
+ */import '../css/style.css'; 
 
 const DOMSelectors ={
     form: document.querySelector("#form"),
