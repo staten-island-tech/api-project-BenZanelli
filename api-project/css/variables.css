@@ -27,16 +27,36 @@
     --evocationimg: url('../public/schools/evocation.webp');
      --backgroundimg: url("");
      --backgroundcolordark: #515151;
-     --backgroundcolorlight: #f59184;
+     --backgroundcolorlight: #f1e3e3;
      --backgroundcolor: #515151;
+     --headercolordark:#c1c1c1;
+     --headercolorlight: #b47679;
+     --headercolor: #c1c1c1;
+     --cardhoverdark: #756875;
+     --cardhoverlight: #e05d5d;
+     --cardhover: #756875;
+     --submitdark:#756e70;
+     --submitlight: #fff;
+     --submit:#756e70;
+     --submittextdark:#fff;
+     --submittextlight:#000;
+     --submittext: #fff;
      --background: #000000;
-
+    
 }
 .darkmd{
-    --backgroundcolor: var(--backgroundcolordark)
+    --backgroundcolor: var(--backgroundcolordark);
+    --headercolor: var(--headercolordark);
+    --cardhover:var(--cardhoverdark);
+    --submit:var(--submitdark);
+    --submittext:var(--submittextdark)
 }
 .lightmd{
-    --backgroundcolor:var(--backgroundcolorlight)
+    --backgroundcolor:var(--backgroundcolorlight);
+    --headercolor: var(--headercolorlight);
+    --cardhover:var(--cardhoverlight);
+    --submit:var(--submitlight);
+    --submittext:var(--submittextlight)
 }
 #acid {
         --backgroundimg: var(--acidimg)

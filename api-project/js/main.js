@@ -152,7 +152,6 @@ function shhh(){
             </audio>
             </div>
             `
-
         )
     })
 }
@@ -167,6 +166,5 @@ function themes(){
             document.body.classList.add("darkmd")
         }
     })
-
     }
 themes()

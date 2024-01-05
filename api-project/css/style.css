@@ -19,7 +19,7 @@ body{
   display: flex;
   flex-wrap: wrap;
  justify-content: space-around;
- background-color: rgb(193, 193, 193);
+ background-color: var(--headercolor);
  border-radius: 20px;
  flex-direction: column;
  margin-top: 10px;
@@ -104,7 +104,7 @@ margin-right: 10px;
 .card:hover {
   border: 1px solid black;
   transform: scale(1.05);
-  background-color: rgb(117, 104, 117);
+  background-color: var(--cardhover);
 }
 .card:active {
   transform: scale(0.95) rotateZ(1.7deg);
@@ -222,7 +222,7 @@ margin-right: 10px;
   display: block;
   width: 200px;
   border: none;
-  border-bottom: 1px solid rgb(75, 71, 71);
+  border-bottom: 1px solid rgb(0, 0, 0);
   background: transparent;
 }
 
@@ -231,7 +231,7 @@ margin-right: 10px;
 }
 
 .wave-group .label {
-  color: #4a4949;
+  color: #000000;
   font-size: 18px;
   font-weight: normal;
   position: absolute;
@@ -250,7 +250,7 @@ margin-right: 10px;
 .wave-group .input:valid ~ label .label-char {
   transform: translateY(-20px);
   font-size: 14px;
-  color: rgb(75, 71, 71);
+  color: rgb(0, 0, 0);
 }
 
 .wave-group .bar {
@@ -265,7 +265,7 @@ margin-right: 10px;
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: rgb(75, 71, 71);
+  background: rgb(0, 0, 0);
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -319,8 +319,8 @@ margin-right: 10px;
   padding: 12px 27px;
   border-radius: 12px;
   font-size: 1.1rem;
-  color: white;
-  background: rgb(117, 110, 112);
+  color: var(--submittext);
+  background: var(--submit);
   will-change: transform;
   transform: translateY(-4px);
   transition: transform
@@ -416,7 +416,7 @@ justify-content: center;
 }
 
 input:checked + .slider {
-  background-color: #58564b;
+  background-color: #dedada;
 }
 
 input:checked + .slider:before {
@@ -427,6 +427,7 @@ input:checked + .slider:before {
     .card{width: 30%;}
     .spells{font-size: 1.2rem; width: 16%; margin-right: 16px;}
     .image:hover{outline: 3px solid rgb(0, 0, 0); outline-offset: -1px}
+    .image:active{outline-offset: -1.2px;}
     .classes{margin-bottom: -40px;}  
  }
  @media screen and (max-width:750px) {
