@@ -1,4 +1,6 @@
 /* import { getData } from "./expands";*/
+import "./css/style.css"
+
 DOMSelectors ={
     form: document.querySelector("#form"),
     itemname: document.querySelector("#item-name"),
