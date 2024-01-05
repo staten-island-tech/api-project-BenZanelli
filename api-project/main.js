@@ -1,7 +1,7 @@
 /* import { getData } from "./expands";*/
 import "./css/style.css"
 
-DOMSelectors ={
+const DOMSelectors ={
     form: document.querySelector("#form"),
     itemname: document.querySelector("#item-name"),
     parent1: document.querySelector(".container1"),
