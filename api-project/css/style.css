@@ -353,11 +353,7 @@ margin-right: 10px;
  button:focus:not(:focus-visible) {
   outline: none;
  }
-.pp{
-  position: absolute;
-  margin-top: -2vh;
-  margin-left: 40%;
-}
+
 .secret{
   width: 1%;
   height: 5vh;
