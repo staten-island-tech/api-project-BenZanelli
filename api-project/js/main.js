@@ -63,11 +63,14 @@ async function real(){
     if(category==="all"){
     DOMSelectors.parent1.innerHTML = ""
     DOMSelectors.parent2.innerHTML = ""
+    DOMSelectors.p1.innerHTML="Find the Button"
+
     populate(URL2)
 }else{
     let newURL =  `https://www.dnd5eapi.co/api/classes/${category}/spells`;
     DOMSelectors.parent1.innerHTML = ""
     DOMSelectors.parent2.innerHTML = ""
+    DOMSelectors.p1.innerHTML="Find the Button"
     populate(newURL)
 }}
 real()
@@ -92,6 +95,7 @@ async function getData(x){
     }  
     DOMSelectors.parent1.innerHTML="";
     DOMSelectors.parent2.innerHTML="";
+    DOMSelectors.p1.innerHTML="Find the Button"
     const data = await response.json(); 
     let id = ""
     let dmg = ""
@@ -137,6 +141,8 @@ function byebye() {
     DOMSelectors.parent2.addEventListener('click', function(event) {
         if (event.target.classList.contains('btn')) {
         DOMSelectors.parent2.innerHTML=""
+        DOMSelectors.p1.innerHTML="Find the Button"
+
         populate(URL2)
         }
 })}
