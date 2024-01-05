@@ -145,7 +145,7 @@ function shhh(){
     DOMSelectors.nothing.addEventListener('click', function(event){
         DOMSelectors.parent2.innerHTML =""
         DOMSelectors.parent1.innerHTML =""
-        DOMSelectors.p1.innerHTML=""
+        DOMSelectors.p1.innerHTML="YIPEEE!!!!!"
         DOMSelectors.parent1.insertAdjacentHTML(
             "beforeend",
             `<div class="nana"><img src="https://media1.tenor.com/m/mJ_Og97j5WwAAAAC/chipi-chapa.gif">
