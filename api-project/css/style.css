@@ -1,4 +1,20 @@
 @import url(variables.css);
+.titles{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--headercolor);
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.thingy{
+  display: flex;
+  justify-content: center;
+
+
+}
 body{
   transition: all .3s;
   background-color: var(--backgroundcolor);
@@ -375,7 +391,7 @@ margin-right: 10px;
 justify-content: center;
   width: 3.5em;
   height: 2em;
-
+ color: transparent;
 }
 
 /* Hide default HTML checkbox */
