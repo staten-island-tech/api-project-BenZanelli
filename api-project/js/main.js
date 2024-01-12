@@ -1,6 +1,5 @@
 /* import { getData } from './expands';
  */import '../css/style.css'; 
-
 const DOMSelectors ={
     form: document.querySelector("#form"),
     itemname: document.querySelector("#item-name"),
@@ -32,7 +31,6 @@ async function populate(x){
         <img class="img" alt="plus-sign">
         </div>`,
     ));
-
     expands()
 }
 catch (error){alert("404 not found")}} 
@@ -154,7 +152,7 @@ function shhh(){
         DOMSelectors.p1.innerHTML="YIPEEE!!!!!"
         DOMSelectors.parent1.insertAdjacentHTML(
             "beforeend",
-            `<div class="nana"><img src="https://media1.tenor.com/m/mJ_Og97j5WwAAAAC/chipi-chapa.gif">
+            `<div class="nana"><img src="https://media1.tenor.com/m/mJ_Og97j5WwAAAAC/chipi-chapa.gif" alt="chipi chapa">
             <audio autoplay loop class="chippi">
             <source src="./public/chipi.mp3" type="audio/mp3">
             </audio>
